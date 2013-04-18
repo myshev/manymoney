@@ -12,17 +12,14 @@
 		<div id="container">
 			<div id="header">
 				<h1>
-					<a href="<?php echo url_for('homepage') ?>">
-						<?/*<img src="/legacy/images/logo.jpg" />*/?>
-						MANY MONEY
-					</a>
+					<a href="<?php echo url_for('homepage') ?>"><?=__('Many Money');?></a>
 				</h1>
 			</div>
 			<?php if ($sf_user->isAuthenticated()){ ?>
 				<div id="menu">
 					<ul>
-						<li><?php echo link_to('News', 'news') ?></li>
-						<li><?php echo link_to('Users', 'sf_guard_user') ?></li>
+						<li><?php echo link_to('News_list', 'news') ?></li>
+						<li><?php echo link_to('Users_list', 'sf_guard_user') ?></li>
 						<li><?php echo link_to('Logout', 'sf_guard_signout') ?></li>
 					</ul>
 				</div>
@@ -31,9 +28,6 @@
 				<?php echo $sf_content ?>
 			</div>
 			<div id="footer">
-				<img src="/legacy/images/jobeet-mini.png" />
-				powered by <a href="/">
-					<img src="/legacy/images/symfony.gif" alt="symfony framework" /></a>
 			</div>
 		</div>
 	</body>
