@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<title>Jobeet Admin Interface</title>
+	<title>Admin Interface</title>
 	<link rel="shortcut icon" href="/favicon.ico" />
 	<?php use_stylesheet('admin.css') ?>
 	<?php include_javascripts() ?>
@@ -13,7 +13,8 @@
 			<div id="header">
 				<h1>
 					<a href="<?php echo url_for('homepage') ?>">
-						<img src="/legacy/images/logo.jpg" />
+						<?/*<img src="/legacy/images/logo.jpg" />*/?>
+						MANY MONEY
 					</a>
 				</h1>
 			</div>

@@ -62,9 +62,11 @@
   background-color: #ffe;
 }
 
-#sf_admin_container input, #sf_admin_container textarea
+div.sf_admin_form input[type="text"], div.sf_admin_form input[type="password"], div.sf_admin_form textarea
 {
-  width: auto;
+  /*width: auto;*/
+	/*input[type="text"] {*/
+	width: 450px;
 }
 
 #sf_admin_container .radio_list, #sf_admin_container .checkbox_list

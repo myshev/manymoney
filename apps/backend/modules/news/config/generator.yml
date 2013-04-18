@@ -17,7 +17,7 @@ generator:
       list:
         title: News list
         sort: [position, asc]
-        display: [=name, announce, image, created_at, position]
+        display: [=name, _announce, image, created_at, position]
         object_actions:
           promote:
             action: promote
