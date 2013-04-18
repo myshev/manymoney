@@ -12,7 +12,8 @@ class ProjectConfiguration extends sfProjectConfiguration {
 			'sfDoctrinePlugin',
 			'csDoctrineActAsSortablePlugin',
 			'sfJQueryUIPlugin',
-			'sfDoctrineGuardPlugin'
+			'sfDoctrineGuardPlugin',
+			'sfCkPlugin'
 		));
-	}
+  }
 }
