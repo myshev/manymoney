@@ -1,0 +1,36 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           News
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          news
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title: News list
+        sort: [position, asc]
+        display: [=name, announce, image, created_at, position]
+        object_actions:
+          promote:
+            action: promote
+          demote:
+            action: demote
+          _edit:        ~
+          _delete:      ~
+        fields:
+          created_at: { label: Published, date_format: dd.MM.yyyy }
+      filter:
+        class: false
+      form:    ~
+      edit:
+        title: Editing news "%%name%%"
+      new:
+        title : Create news

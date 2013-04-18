@@ -1,10 +1,17 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/07-Databases
 
-all:
+prod:
   doctrine:
     class: sfDoctrineDatabase
     param:
-      dsn:      mysql:host=localhost;dbname=manymoney
-      username: root
-      password: 
+      dsn:      mysql:host=78.24.217.78;dbname=manymoney
+      username: manymoney
+      password: Tm5zVXJtR4BCFfcZ
+dev:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn:      mysql:host=78.24.217.78;dbname=manymoney
+      username: manymoney
+      password: Tm5zVXJtR4BCFfcZ
