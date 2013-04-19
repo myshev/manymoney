@@ -13,7 +13,7 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
+      fields: ~
       list:
         title: News list
         sort: [position, asc]
