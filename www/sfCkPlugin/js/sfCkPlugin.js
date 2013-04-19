@@ -6,7 +6,8 @@ window.onload = function()
   {
     if(textareas.item(i).getAttribute('class') !== "no-editor")
     {
-      CKEDITOR.replace( textareas.item(i).getAttribute('name') );
+      var editorDescription = CKEDITOR.replace( textareas.item(i).getAttribute('name') );
+		CKFinder.setupCKEditor( editorDescription, '/js/ckfinder/');
     }
   }
 }
