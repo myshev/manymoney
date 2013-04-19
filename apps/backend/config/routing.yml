@@ -1,3 +1,12 @@
+stat_page:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                StatPage
+    module:               stat_page
+    prefix_path:          /stat_page
+    column:               id
+    with_wildcard_routes: true
+
 news:
   class: sfDoctrineRouteCollection
   options:
