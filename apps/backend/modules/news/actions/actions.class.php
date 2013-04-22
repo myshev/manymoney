@@ -26,4 +26,24 @@ class newsActions extends autoNewsActions {
 		$object->demote();
 		$this->redirect("@news");
 	}
+
+	public function executeDelete(sfWebRequest $request)
+	{
+		$request->checkCSRFProtection();
+
+		$obRecord		= $this->getRoute()->getObject();
+
+		$this->dispatcher->notify(new sfEvent($this, 'admin.delete_object', array('object' => $this->getRoute()->getObject())));
+
+		if ($this->getRoute()->getObject()->delete())
+		{
+			if($obRecord->getImage() != '') {
+				@unlink($_SERVER['DOCUMENT_ROOT'].'/uploads/news/'.$obRecord->getImage());
+				@unlink($_SERVER['DOCUMENT_ROOT'].'/uploads/news/thumb/'.$obRecord->getImage());
+			}
+			$this->getUser()->setFlash('notice', 'The item was deleted successfully.');
+		}
+
+		$this->redirect('@news');
+	}
 }

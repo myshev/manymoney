@@ -3,8 +3,10 @@
 require_once dirname(__FILE__) . '/../lib/vendor/lib/autoload/sfCoreAutoload.class.php';
 sfCoreAutoload::register();
 
-class ProjectConfiguration extends sfProjectConfiguration {
-	public function setup() {
+class ProjectConfiguration extends sfProjectConfiguration
+{
+	public function setup()
+	{
 
 		$this->setWebDir($this->getRootDir() . '/www');
 
@@ -14,7 +16,9 @@ class ProjectConfiguration extends sfProjectConfiguration {
 			'sfJQueryUIPlugin',
 			'sfDoctrineGuardPlugin',
 			'sfCkPlugin',
-			'sfFormExtraPlugin'
+			'sfFormExtraPlugin',
+			'sfImageTransformPlugin',
+			'sfThumbnailPlugin'
 		));
-  	}
+	}
 }
