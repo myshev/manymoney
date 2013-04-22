@@ -19,7 +19,7 @@ generator:
         batch_actions: {}
         object_actions: { _edit: ~ }
         title: Stat pages list
-        display: [=name, image, updated_at]
+        display: [=name, _image, updated_at]
         fields:
           updated_at: { date_format: dd.MM.yyyy }
       filter:
