@@ -180,6 +180,10 @@
         <source>Create page</source>
         <target>Создание статической страницы</target>
       </trans-unit>
+      <trans-unit id="45">
+        <source>User list</source>
+        <target>Список пользователей</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
