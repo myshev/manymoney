@@ -12,7 +12,8 @@ default:
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [main.css]
+#  stylesheets:    [main.css, style.css, print.css, other.css]
+  stylesheets:    [style.css, print.css : { media: print }, other.css]
 
   javascripts:    []
 
