@@ -59,7 +59,7 @@ News:
       autoincrement: false
       comment: 'Заголовок новости'
     announce:
-      type: string(300)
+      type: string(1000)
       notnull: true
       comment: 'Анонс'
     description:

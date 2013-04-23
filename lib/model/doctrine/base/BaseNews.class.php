@@ -41,11 +41,11 @@ abstract class BaseNews extends sfDoctrineRecord
              'comment' => 'Заголовок новости',
              'length' => 255,
              ));
-        $this->hasColumn('announce', 'string', 300, array(
+        $this->hasColumn('announce', 'string', 1000, array(
              'type' => 'string',
              'notnull' => true,
              'comment' => 'Анонс',
-             'length' => 300,
+             'length' => 1000,
              ));
         $this->hasColumn('description', 'clob', null, array(
              'type' => 'clob',
