@@ -27,6 +27,7 @@ generator:
           _delete:      ~
         fields:
           created_at: { label: Published, date_format: dd.MM.yyyy }
+        max_per_page: 10
       filter:
         class: false
       form:    ~
