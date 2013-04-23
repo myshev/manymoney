@@ -74,3 +74,8 @@ News:
       notnull: false
       autoincrement: false
       comment: 'Изображение'
+    is_active:
+      type: boolean
+      notnull: true
+      default: true
+      comment: 'Элемент активен'

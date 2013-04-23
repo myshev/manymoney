@@ -11,15 +11,18 @@ Doctrine_Manager::getInstance()->bindComponent('News', 'doctrine');
  * @property string $announce
  * @property clob $description
  * @property string $image
+ * @property boolean $is_active
  * 
- * @method string getName()        Returns the current record's "name" value
- * @method string getAnnounce()    Returns the current record's "announce" value
- * @method clob   getDescription() Returns the current record's "description" value
- * @method string getImage()       Returns the current record's "image" value
- * @method News   setName()        Sets the current record's "name" value
- * @method News   setAnnounce()    Sets the current record's "announce" value
- * @method News   setDescription() Sets the current record's "description" value
- * @method News   setImage()       Sets the current record's "image" value
+ * @method string  getName()        Returns the current record's "name" value
+ * @method string  getAnnounce()    Returns the current record's "announce" value
+ * @method clob    getDescription() Returns the current record's "description" value
+ * @method string  getImage()       Returns the current record's "image" value
+ * @method boolean getIsActive()    Returns the current record's "is_active" value
+ * @method News    setName()        Sets the current record's "name" value
+ * @method News    setAnnounce()    Sets the current record's "announce" value
+ * @method News    setDescription() Sets the current record's "description" value
+ * @method News    setImage()       Sets the current record's "image" value
+ * @method News    setIsActive()    Sets the current record's "is_active" value
  * 
  * @package    manymoney
  * @subpackage model
@@ -61,6 +64,12 @@ abstract class BaseNews extends sfDoctrineRecord
              'autoincrement' => false,
              'comment' => 'Изображение',
              'length' => 255,
+             ));
+        $this->hasColumn('is_active', 'boolean', null, array(
+             'type' => 'boolean',
+             'notnull' => true,
+             'default' => true,
+             'comment' => 'Элемент активен',
              ));
     }
 
