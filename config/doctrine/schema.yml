@@ -12,14 +12,6 @@ StatPage:
       primary: false
       notnull: true
       autoincrement: false
-      comment: 'Название страницы'
-    name:
-      type: string(255)
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      autoincrement: false
       comment: 'Заголовок страницы'
     alias:
       type: string(100)
