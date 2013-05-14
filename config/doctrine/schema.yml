@@ -12,14 +12,6 @@ StatPage:
       primary: false
       notnull: true
       autoincrement: false
-      comment: 'Название страницы'
-    name:
-      type: string(255)
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      autoincrement: false
       comment: 'Заголовок страницы'
     alias:
       type: string(100)
@@ -59,7 +51,7 @@ News:
       autoincrement: false
       comment: 'Заголовок новости'
     announce:
-      type: string(300)
+      type: string(1000)
       notnull: true
       comment: 'Анонс'
     description:
@@ -74,3 +66,8 @@ News:
       notnull: false
       autoincrement: false
       comment: 'Изображение'
+    is_active:
+      type: boolean
+      notnull: true
+      default: true
+      comment: 'Элемент активен'
